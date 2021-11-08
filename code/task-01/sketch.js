@@ -51,7 +51,7 @@ function draw() {
 
   //Schneeflocken
   fill("rgba(255, 255, 255, 0.7)");
-  stroke("rgba(255, 255, 255, 0.7)");
+  stroke("rgba(255, 255, 255, 0)");
   circle(100, 270, 12);
   circle(75, 205, 10);
   circle(300, 225, 12);

@@ -1,42 +1,29 @@
-var stary = [];
-const starCount = 10;
+starCount = 50;
 
 function setup() {
   let CanvasHeight = 400;
   let CanvasWidth = 400;
-  frameRate(60);
+  frameRate(1);
   createCanvas(CanvasHeight, CanvasWidth);
   noLoop();
-
-  for (var s = 0; s < starCount; s++) {
-    let starSpotX = random();
-    let starSpotY = random();
-    let starSpikes = random(4, 9);
-    var stary = {
-      x: width * starSpotX,
-      y: height * starSpotY,
-      radius1: 3,
-      radius2: 7,
-      nPoints: starSpikes
-    };
-    stary.push(star);
-
-    for (var s = 0; s < stars.length; s++) {
-      let starSpotX = random();
-      let starSpotY = random();
-      let starSpikes = random(4, 9);
-      fill("#FEFF9E");
-      noStroke();
-      push();
-      translate(width * starSpotX , height * starSpotY);
-      rotate(frameCount / 120);
-      stars(2, 2, 3, 7, starSpikes);
-      pop();
-    }
 }
 
+function draw() {
+  background("#1C2E4A");
+  fill("#FEFF9E");
+  noStroke();
+  for (let s = 0; s < starCount; s++) {
+    let starSpotX = random(0.03, 0.97);
+    let starSpotY = random(0.03, 0.97);
+    let starSpikes = round(random(4, 9));
+    push();
+    translate(width * starSpotX , height * starSpotY);
+    star(2, 2, 3, 7, starSpikes);
+    pop();
+  }
+}
 
-function stars(x, y, radius1, radius2, nPoints) {
+function star(x, y, radius1, radius2, nPoints) {
   let angle = TWO_PI / nPoints;
   let halfAngle = angle / 2;
   beginShape();

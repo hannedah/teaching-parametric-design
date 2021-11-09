@@ -135,4 +135,4 @@ const searchPercentage = 30;
 const searchWidth = fullWidth / fullPercentage * searchPercentage;
 ```
 
-So we require a pair defining the relationship between two scales (pixel and percentage). And from there on, we can use other values, from either scale (pixel or percentage) to calculate the corresponding value, by dividing the the pair and multiplying by the addition value, to find this value's corresponding value.
+So we require a pair defining the relationship between two scales (pixel and percentage). And from there on, we can use other values, from either scale (pixel or percentage) to calculate the corresponding value, by dividing the pair and multiplying by the addition value, to find this value's corresponding value.

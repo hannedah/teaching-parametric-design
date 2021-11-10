@@ -1,4 +1,4 @@
-starCount = 50;
+starCount = 80;
 
 function setup() {
   let CanvasHeight = 400;

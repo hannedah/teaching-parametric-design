@@ -17,17 +17,17 @@ function saveFunction() {
 function draw() {
   noLoop();
   background(255);
-  fill(0, 50);
+  fill(0, 65);
   noStroke("black");
   strokeWeight(1);
 
   let x, y;
   let radiuses = [];
   
-  for (let c = 0; c < 5; c++ ) {
+  for (let c = 0; c < 6; c++ ) {
       beginShape();
       for(let j = 0; j < 24; j++) {
-        let radius = random(45, 80);
+        let radius = random(40, 65);
         let angle = j * 15;
         radiuses.push(radius);
         if(c > 0) radiuses[j] *= 1.25;
@@ -39,6 +39,3 @@ function draw() {
       endShape(CLOSE);
   }
 }
-
-
-// 10x10cm

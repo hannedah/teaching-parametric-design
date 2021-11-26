@@ -15,20 +15,38 @@ function saveFunction() {
 
 function draw() {
   background(255);
-  fill(0);
+  noFill();
   stroke("red");
-  strokeWeight(20);
+  strokeWeight(1.5);
+  for (let h = -1; h < 4; h++) { //x
+    for (let b = -1; b < 5; b++) { //y
+      push();
+      translate(110 * h + 61.5, 95 * b + 16);
+      if (b%2 === 0){ 
+        translate(h + 56, 0);
+        rotate(100);
+      } else {
+        translate(h + 1, 0);
+        rotate(100);
+      }
+      hexagon(31.5, 6);
+      pop();
+    }
+  }
+  stroke("black");
+  strokeWeight(1.5);
   for (let h = 0; h < 4; h++) { //x
     for (let b = 0; b < 4; b++) { //y
       push();
-      translate(110 * h + 6.5, 95 * b + 60);
+      translate(110 * h + 6.5, 95 * b + 48);
       if (b%2 === 0){ 
         translate(h + 55, 0);
         rotate(100);
       } else {
+        translate(h + 1, 0);
         rotate(100);
       }
-      hexagon(40, 6);
+      hexagon(31.5, 6);
       pop();
     }
   }

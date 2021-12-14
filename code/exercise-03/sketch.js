@@ -12,23 +12,23 @@ function draw() {
     for (let b = 0; b < 5; b++) { //breite
       push();
       translate(110 * h, 110 * b);
-      if (b%2 === 0){
+      if (b%2 === 0){ 
         rotate(frameCount / -100.0);
       } else {
         rotate(frameCount / 100.0);
       }
-      hexagon(0, 0, 80, 6);
+      hexagon(80, 6);
       pop();
     }
   }
 }
 
-function hexagon(x, y, radius, npoints) {
+function hexagon(radius, npoints) {
   let angle = TWO_PI / npoints;
   beginShape();
   for (let a = 0; a < TWO_PI; a += angle) {
-    let sx = x + cos(a) * radius;
-    let sy = y + sin(a) * radius;
+    let sx = cos(a) * radius;
+    let sy = sin(a) * radius;
     vertex(sx, sy);
   }
   endShape(CLOSE);

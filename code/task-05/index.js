@@ -52,7 +52,7 @@ const main = () => {
   cheese = subtract([cheese, pieceOfCheese]);
   pieceOfCheese = translate([12, 10, 0], rotate([Math.PI / 2, 0, 0], pieceOfCheese));
 
-  const colorCheese = colorize(colorNameToRgb('yellow'), cheese); // RGB Farbangabe funktioniert nicht richtig, falsche Farbausgabe + keine Shadows
+  const colorCheese = colorize(colorNameToRgb('yellow'), cheese); // RGB Farbangabe funktioniert nicht richtig, falsche Farbausgabe + keine Shadows // Farben nur 0-1
   const colorPieceOfCheese = colorize(colorNameToRgb('yellow'), pieceOfCheese);
 
   return [colorCheese, colorPieceOfCheese];
@@ -62,4 +62,5 @@ module.exports = { main };
 
 
 
-// Warum kann man bei const den radius verändern? (für die ellipse) (im Video)
+// Warum kann man bei const den radius verändern? (für die ellipse) (im Video) => children können trotz const noch verändert werden
+// Arrays sind keine shapes und können nicht voneinander abgezogen werden
